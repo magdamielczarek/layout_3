@@ -1,0 +1,26 @@
+@import '../utils/variables';
+
+.navigation {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 10vh;
+  justify-content: space-between;
+  padding: 0 16%;
+  position: sticky;
+  ul {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    text-transform: uppercase;
+  }
+  li {
+    margin-left: 2rem;
+    a {
+      color: $text-color-dark;
+      font-family: $secondary-font;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+  }
+}

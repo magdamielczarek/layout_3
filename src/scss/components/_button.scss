@@ -1,0 +1,40 @@
+@import '../utils/variables';
+
+.button {
+  cursor: pointer;
+  outline: none;
+  padding: 1rem;
+  position: relative;
+  transition: transform .4s ease-in-out;
+  &--color {
+    background-color: $accent-color;
+    border: none;
+    border-radius: 2rem;
+    color: $text-color-light;
+    font-family: $secondary-font;
+    font-weight: 700;
+    overflow: hidden;
+    text-transform: uppercase;
+    min-width: 200px;
+    &:before {
+      background-image: linear-gradient(to bottom, rgba($secondary-color,.5), transparent);
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: -100%;
+      transition: transform .4s ease-in-out;
+      width: 100%;
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:hover::before {
+      transform: translateY(100%);
+    }
+    a {
+      z-index: 3;
+    }
+  }
+}
+

@@ -1,0 +1,30 @@
+@import '../utils/variables';
+
+.header {
+  color: $text-color-light;
+  background-size: cover;
+  background: #222222 url("../../assets/images/header_background.png") no-repeat center;
+  height: 90vh;
+  font-size: 20px;
+  position: relative;
+  &__overlay {
+    align-items: center;
+    background-color: rgba($primary-color,.8);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+    > p {
+      margin: $margin-large 0;
+    }
+  }
+  &__heading {
+    font-family: $secondary-font;
+    font-size: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 60%;
+  }
+}

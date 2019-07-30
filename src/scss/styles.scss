@@ -1,6 +1,13 @@
-@import './base/reset';
-@import './base/typography';
+@import 'base/reset';
+@import 'base/typography';
 
-@import './utils/variables';
+@import 'components/button';
 
-@import './pages/home';
+@import 'layout/header';
+@import 'layout/navigation';
+
+@import 'utils/variables';
+
+@import 'pages/home';
+
+
