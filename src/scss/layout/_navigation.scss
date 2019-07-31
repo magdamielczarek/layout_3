@@ -1,4 +1,5 @@
 @import '../utils/variables';
+@import '../utils/mixins';
 
 .navigation {
   display: flex;
@@ -8,19 +9,53 @@
   padding: 0 16%;
   position: sticky;
   ul {
-    align-items: center;
-    display: flex;
-    justify-content: center;
+    @include centered;
     list-style-type: none;
     text-transform: uppercase;
   }
   li {
+    height: 100%;
     margin-left: 2rem;
     a {
+      @include centered;
       color: $text-color-dark;
       font-family: $secondary-font;
-      font-size: 1rem;
+      font-size: 14px;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
       text-decoration: none;
+      &::after {
+        background-color: $accent-color;
+        border-radius: 2rem;
+        bottom: 20%;
+        content: '';
+        height: .4rem;
+        left: -100%;
+        position: absolute;;
+        transition: .5s transform ease-in-out;
+        width: 100%;
+      }
+      &:hover::after, &:active::after {
+        transform: translateX(100%);
+      }
     }
+  }
+}
+
+.logo {
+  flex-flow: row nowrap;
+  @include centered;
+  span:first-of-type {
+    @include centered;
+    background-color: $accent-color;
+    border-radius: 50%;
+    height: 2rem;
+    margin-right: 5px;
+    width: 2rem;
+  }
+  span:last-of-type {
+    font-family: $secondary-font;
+    font-size: 18px;
   }
 }
