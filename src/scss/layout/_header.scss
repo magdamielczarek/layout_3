@@ -4,8 +4,9 @@
   color: $text-color-light;
   background-size: cover;
   background: #222222 url("../../assets/images/header_background.png") no-repeat center;
-  height: 90vh;
-  font-size: 20px;
+  height: 75vh;
+  font-size: 2rem;
+  max-height: 530px;
   position: relative;
   &__overlay {
     align-items: center;
@@ -22,7 +23,7 @@
   }
   &__heading {
     font-family: $secondary-font;
-    font-size: 60px;
+    font-size: 6rem;
     text-align: center;
     text-transform: uppercase;
     width: 60%;

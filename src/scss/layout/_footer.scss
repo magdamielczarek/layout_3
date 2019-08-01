@@ -1,0 +1,47 @@
+@import '../utils/variables';
+
+.footer {
+  &__shortcuts {
+    background-color: $primary-color;
+    color: #ececec;
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 1.4rem;
+    justify-content: center;
+    padding: 4rem 23rem;
+  }
+  &__socialMedia {
+    align-items: center;
+    color: #555;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 4rem 23rem;
+    &__copyright {
+      color: #555;
+      font-family: $secondary-font;
+      font-size: 1.4rem;
+      margin-right: 11.9rem;
+    }
+    &__icons {
+      @include centered;
+    }
+    &__icon {
+      background-color: $primary-color;
+      border-radius: 50%;
+      cursor: pointer;
+      height: 4rem;
+      margin-left: .9rem;
+      padding: 1rem;
+      transition: background-color .5s;
+      width: 4rem;
+      &:hover {
+        background-color: $accent-color;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+

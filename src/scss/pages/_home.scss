@@ -1,0 +1,208 @@
+@import '../utils/variables';
+
+.container {
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.section:not(.logotypes) {
+  padding: 10rem 23rem;
+}
+
+.features {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding: 10rem;
+  &__feature {
+    display: flex;
+    flex-flow: column nowrap;
+    font-family: $secondary-font;
+    text-align: center;
+    &__img {
+      margin: 0 auto;
+      position: relative;
+      width: 35%;
+      > img {
+        display: block;
+        width: 100%;
+      }
+      &--bordered {
+        border: 3px solid $text-color-neutral;
+        border-radius: 50%;
+        padding: 2rem;
+      }
+    }
+    &__heading {
+      color: $text-color-dark;
+      font-size: 1.8rem;
+      margin: 3rem 0 1.5rem;
+      text-transform: uppercase;
+    }
+    > p {
+      font-size: 1.4rem;
+    }
+    &:not(:last-of-type) {
+      margin-right: 5.6rem;
+    }
+  }
+}
+
+.centeredFeature {
+  &:after {
+    background-color: $text-color-neutral;
+    content: '';
+    height: 3px;
+    left: 120%;
+    position: absolute;
+    top: 50%;
+    width: 200%;
+    transform: translateY(-50%);
+  }
+}
+
+
+.cta--first {
+  @include centered;
+  height: 618px;
+  position: relative;
+  > div:first-of-type {
+    background-color: $grey-background-first;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 35%;
+    > img {
+      left: 100%;
+      width: 90%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+  > div:last-of-type {
+    background-size: cover;
+    background: url("../../assets/images/cta-background.png") no-repeat center;
+    height: 100%;
+    position: relative;
+    width: 65%;
+    .overlay {
+      background-color: rgba($primary-color, .8);
+      color: $text-color-grey;
+      font-size: 1.6rem;
+      height: 100%;
+      left: 0;
+      padding: 10rem;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      > ul {
+        list-style-type: none;
+        margin-top: 2.9rem;
+        li {
+          align-items: center;
+          display: flex;
+          flex-flow: row nowrap;
+          margin-bottom: .8rem;
+          span:first-of-type {
+            margin-right: 2rem;
+            width: 5%;
+          }
+          span:last-of-type {
+            width: 80%;
+          }
+          img {
+            width: 100%;
+          }
+        }
+      }
+      > h2 {
+        color: $text-color-light;
+        font-family: $secondary-font;
+        font-size: 4rem;
+        letter-spacing: -2;
+        margin-bottom: 4.5rem;
+        text-transform: uppercase;
+        > span {
+          color: $accent-color;
+        }
+      }
+    }
+  }
+  button {
+    margin-top: 2rem;
+  }
+}
+
+.logotypes {
+  padding: 6rem;
+  @include centered;
+  &__client {
+    &:not(:last-of-type) {
+      margin-right: 2rem;
+    }
+  }
+}
+
+.values {
+  background-color: $grey-background-second;
+}
+
+.project {
+  background: url("../../assets/images/tablet.png") no-repeat 203% 85%;
+  background-size: 75%;
+  h4 {
+    color: $text-color-dark;
+    font-family: $secondary-font;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  }
+  h4 + p {
+    font-size: 1.6rem;
+  }
+  &__description {
+    margin-top: 8.6rem;
+    width: 50%;
+    > p {
+      font-size: 1.6rem;
+    }
+    &__feature {
+      align-items: center;
+      display: flex;
+      flex-flow: row nowrap;
+      margin: 2rem 0;
+      img {
+        border: 2px solid black;
+        border-radius: 50%;
+        margin-right: 2rem;
+        padding: 1.4rem;
+        width: 6.7rem;
+      }
+      h5 {
+        color: $text-color-dark;
+        font-family: $secondary-font;
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 1.6rem;
+      }
+    }
+    &__link {
+      color: $accent-color;
+      font-family: $secondary-font;
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.ctaFinal {
+  background-color: $accent-color;
+  padding: 6rem;
+  text-align: center;
+  h2 {
+    margin-bottom: 3.2rem;
+  }
+}
