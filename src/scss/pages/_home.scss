@@ -139,7 +139,7 @@
   @include centered;
   &__client {
     &:not(:last-of-type) {
-      margin-right: 2rem;
+      margin-right: 4rem;
     }
   }
 }

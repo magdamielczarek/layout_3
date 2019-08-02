@@ -348,7 +348,7 @@ html {
   display: flex;
   justify-content: center; }
   .logotypes__client:not(:last-of-type) {
-    margin-right: 2rem; }
+    margin-right: 4rem; }
 
 .values {
   background-color: #f9f9f9; }
