@@ -237,7 +237,7 @@ html {
   margin: 0 auto;
   max-width: 1400px; }
 
-.section:not(.logotypes) {
+.section {
   padding: 10rem 23rem; }
 
 .features {
@@ -392,6 +392,76 @@ html {
       font-weight: 700;
       margin-top: 2.5rem;
       text-transform: uppercase; }
+
+.clients {
+  padding: 10rem 8rem; }
+  .clients__wrapper {
+    margin: 8.6rem 0 7.5rem; }
+
+.client {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative; }
+  .client:first-of-type {
+    margin-bottom: 8.1rem; }
+  .client--left {
+    right: 2%; }
+    .client--left .client__opinion {
+      margin-left: 4rem; }
+      .client--left .client__opinion:before {
+        border-style: solid;
+        content: '';
+        height: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        border-width: 12px 24px 12px 0;
+        border-color: transparent #f9f9f9 transparent transparent;
+        right: 100%; }
+  .client--right {
+    left: 2%; }
+    .client--right .client__image {
+      order: 2; }
+    .client--right .client__opinion {
+      margin-right: 4rem; }
+      .client--right .client__opinion:before {
+        border-style: solid;
+        content: '';
+        height: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        border-width: 12px 0 12px 24px;
+        border-color: transparent transparent transparent #f9f9f9;
+        left: 100%; }
+  .client__image {
+    align-items: center;
+    display: flex;
+    -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+    justify-content: center;
+    overflow: hidden;
+    height: 22rem;
+    width: 22rem; }
+    .client__image img {
+      width: 150%; }
+  .client__opinion {
+    background-color: #f9f9f9;
+    font-size: 2.2rem;
+    max-width: 60%;
+    padding: 4.2rem;
+    position: relative;
+    text-align: center; }
+    .client__opinion p {
+      margin-bottom: 1.8rem; }
+    .client__opinion__personalData {
+      color: #7cc576;
+      font-size: 1.8rem; }
+      .client__opinion__personalData:before {
+        content: "-"; }
 
 .ctaFinal {
   background-color: #7cc576;

@@ -3,3 +3,13 @@
   display: flex;
   justify-content: center;
 }
+
+@mixin triangle {
+  border-style: solid;
+  content: '';
+  height: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+}
