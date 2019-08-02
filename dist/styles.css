@@ -17,6 +17,9 @@ body * {
   margin: 0;
   padding: 0; }
 
+image {
+  max-width: 100%; }
+
 html {
   color: #777777;
   font-family: "Roboto Slab", serif;
@@ -172,7 +175,34 @@ html {
   flex-flow: row nowrap;
   font-size: 1.4rem;
   justify-content: center;
-  padding: 4rem 23rem; }
+  padding: 4rem 21rem; }
+  .footer__shortcuts__block {
+    flex: 1;
+    margin-right: 3rem; }
+  .footer__shortcuts__block:last-of-type .footer__shortcuts__point {
+    display: flex;
+    flex-flow: column nowrap;
+    line-height: 2.2rem; }
+  .footer__shortcuts__block:not(:first-of-type) .footer__shortcuts__point:hover {
+    color: #7cc576; }
+  .footer__shortcuts__heading {
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase; }
+  .footer__shortcuts__point {
+    color: #fff;
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+    text-decoration: none; }
+    .footer__shortcuts__point span:first-of-type {
+      margin-right: 1.5rem;
+      width: 2.3rem; }
+    .footer__shortcuts__point img {
+      width: 100%; }
 
 .footer__socialMedia {
   align-items: center;

@@ -8,7 +8,44 @@
     flex-flow: row nowrap;
     font-size: 1.4rem;
     justify-content: center;
-    padding: 4rem 23rem;
+    padding: 4rem 21rem;
+    &__block {
+      flex: 1;
+      margin-right: 3rem;
+    }
+    &__block:last-of-type .footer__shortcuts__point {
+      display: flex;
+      flex-flow: column nowrap;
+      line-height: 2.2rem;
+    }
+    &__block:not(:first-of-type) .footer__shortcuts__point:hover {
+      color: $accent-color;
+    }
+    &__heading {
+      color: $text-color-light;
+      font-family: $secondary-font;
+      font-size: 1.8rem;
+      margin-bottom: 3rem;
+      text-transform: uppercase;
+    }
+    &__point {
+      color: $text-color-light;
+      display: flex;
+      flex-flow: row nowrap;
+      font-size: 1.6rem;
+      margin-bottom: 2.5rem;
+      text-decoration: none;
+      span:first-of-type {
+        margin-right: 1.5rem;
+        width: 2.3rem;
+      }
+      span:first-of-type {
+
+      }
+      img {
+        width: 100%;
+      }
+    }
   }
   &__socialMedia {
     align-items: center;
