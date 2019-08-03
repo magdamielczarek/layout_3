@@ -98,6 +98,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scss_styles_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/styles.scss */ "./src/scss/styles.scss");
 /* harmony import */ var _scss_styles_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_styles_scss__WEBPACK_IMPORTED_MODULE_0__);
 
+var features = document.querySelectorAll('.features__feature,.client');
+var observer = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (entry.intersectionRatio > 0) {
+      entry.target.style.opacity = '1';
+      observer.unobserve(entry.target);
+    }
+  });
+});
+features.forEach(function (feature) {
+  observer.observe(feature);
+});
 
 /***/ }),
 

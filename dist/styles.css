@@ -244,11 +244,14 @@ html {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  padding: 10rem; }
+  margin-top: 8.6rem;
+  overflow: hidden; }
   .features__feature {
     display: flex;
     flex-flow: column nowrap;
     font-family: "Montserrat", sans-serif;
+    opacity: 0;
+    transition: opacity 2.6s;
     text-align: center; }
     .features__feature__img {
       margin: 0 auto;
@@ -360,6 +363,7 @@ html {
     color: #222;
     font-family: "Montserrat", sans-serif;
     font-size: 1.8rem;
+    margin-bottom: 1.4rem;
     text-transform: uppercase; }
   .project h4 + p {
     font-size: 1.6rem; }
@@ -386,6 +390,7 @@ html {
       .project__description__feature p {
         font-size: 1.6rem; }
     .project__description__link {
+      display: block;
       color: #7cc576;
       font-family: "Montserrat", sans-serif;
       font-size: 1.6rem;
@@ -402,7 +407,9 @@ html {
   align-items: center;
   display: flex;
   justify-content: center;
-  position: relative; }
+  position: relative;
+  opacity: 0;
+  transition: opacity 2.6s; }
   .client:first-of-type {
     margin-bottom: 8.1rem; }
   .client--left {

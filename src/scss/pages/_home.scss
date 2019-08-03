@@ -13,11 +13,14 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  padding: 10rem;
+  margin-top: 8.6rem;
+  overflow: hidden;
   &__feature {
     display: flex;
     flex-flow: column nowrap;
     font-family: $secondary-font;
+    opacity: 0;
+    transition: opacity 2.6s;
     text-align: center;
     &__img {
       margin: 0 auto;
@@ -155,6 +158,7 @@
     color: $text-color-dark;
     font-family: $secondary-font;
     font-size: 1.8rem;
+    margin-bottom: 1.4rem;
     text-transform: uppercase;
   }
   h4 + p {
@@ -188,6 +192,7 @@
       }
     }
     &__link {
+      display: block;
       color: $accent-color;
       font-family: $secondary-font;
       font-size: 1.6rem;
@@ -208,6 +213,8 @@
 .client {
   @include centered;
   position: relative;
+  opacity: 0;
+  transition: opacity 2.6s;
   &:first-of-type {
     margin-bottom: 8.1rem;
   }
