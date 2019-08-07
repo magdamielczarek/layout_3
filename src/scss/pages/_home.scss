@@ -246,15 +246,14 @@
     }
   }
   &__image {
-    align-items: center;
-    display: flex;
+    @include centered;
     clip-path: circle(50% at 50% 50%);
-    justify-content: center;
     overflow: hidden;
     height: 22rem;
     width: 22rem;
     img {
-      width: 150%;
+      height: 120%;
+      width: auto;
     }
   }
   &__opinion {

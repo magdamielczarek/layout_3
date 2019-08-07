@@ -17,9 +17,6 @@ body * {
   margin: 0;
   padding: 0; }
 
-image {
-  max-width: 100%; }
-
 html {
   color: #777777;
   font-family: "Roboto Slab", serif;
@@ -447,14 +444,15 @@ html {
   .client__image {
     align-items: center;
     display: flex;
+    justify-content: center;
     -webkit-clip-path: circle(50% at 50% 50%);
             clip-path: circle(50% at 50% 50%);
-    justify-content: center;
     overflow: hidden;
     height: 22rem;
     width: 22rem; }
     .client__image img {
-      width: 150%; }
+      height: 120%;
+      width: auto; }
   .client__opinion {
     background-color: #f9f9f9;
     font-size: 2.2rem;
