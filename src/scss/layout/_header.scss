@@ -1,4 +1,5 @@
 @import '../utils/variables';
+@import '../utils/mixins';
 
 .header {
   color: $text-color-light;
@@ -27,5 +28,8 @@
     text-align: center;
     text-transform: uppercase;
     width: 60%;
+    @include respond(md){
+      width: 100%;
+    }
   }
 }

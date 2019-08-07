@@ -13,3 +13,32 @@
   transform: translateY(-50%);
   width: 0;
 }
+
+@mixin respond($breakpoint){
+  @if $breakpoint == xl {
+    @media(min-width:1050px){
+      @content;
+    }
+  }
+  @if $breakpoint == lg {
+    @media(max-width:1049px){
+      @content;
+    }
+  }
+  @if $breakpoint == md {
+    @media(max-width:820px){
+      @content;
+    }
+  }
+  @if $breakpoint == sm {
+    @media(max-width:600px){
+      @content;
+    }
+  }
+  @if $breakpoint == xs {
+    @media(max-width:480px){
+      @content;
+    }
+  }
+}
+

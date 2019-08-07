@@ -45,6 +45,12 @@
       }
     }
   }
+  @include respond(md){
+    padding: 0 5%;
+  }
+  @include respond(sm){
+    display: none;
+  }
 }
 
 .logo {

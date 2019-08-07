@@ -1,20 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto+Slab&display=swap');
 @import '../utils/variables';
+@import '../utils/mixins';
 
 html {
   color: $text-color-neutral;
   font-family: $primary-font;
   font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+  @include respond(md){
+    font-size: 50%;
+  }
 }
 
 .section__heading {
   color: $text-color-dark;
   font-family: $secondary-font;
-  font-size: 40px;
+  font-size: 4rem;
   text-align: center;
   text-transform: uppercase;
   &--light {
     color: $text-color-light;
+  }
+  @include respond(xs){
+    font-size: 3rem;
   }
 }
 
@@ -22,4 +29,7 @@ html {
   color: $text-color-neutral;
   font-size: 20px;
   text-align: center;
+  @include respond(xs){
+    font-size: 1.8rem;
+  }
 }

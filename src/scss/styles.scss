@@ -5,9 +5,11 @@
 
 @import 'layout/header';
 @import 'layout/navigation';
+@import 'layout/navigation_mobile';
 @import 'layout/footer';
 
 @import 'utils/variables';
+@import 'utils/mixins';
 
 @import 'pages/home';
 

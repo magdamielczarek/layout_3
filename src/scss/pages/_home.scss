@@ -1,4 +1,5 @@
 @import '../utils/variables';
+@import '../utils/media';
 
 .container {
   margin: 0 auto;
@@ -7,6 +8,15 @@
 
 .section {
   padding: 10rem 23rem;
+  @include respond(lg){
+    padding: 10rem;
+  }
+  @include respond(md){
+    padding: 5rem;
+  }
+  @include respond(xs){
+    padding: 2rem 1rem;
+  }
 }
 
 .features {
@@ -22,6 +32,9 @@
     opacity: 0;
     transition: opacity 2.6s;
     text-align: center;
+    @include respond(xs){
+      margin-bottom: 2rem;
+    }
     &__img {
       margin: 0 auto;
       position: relative;
@@ -35,6 +48,9 @@
         border-radius: 50%;
         padding: 2rem;
       }
+      @include respond(xs){
+        width: 20%;
+      }
     }
     &__heading {
       color: $text-color-dark;
@@ -47,29 +63,35 @@
     }
     &:not(:last-of-type) {
       margin-right: 5.6rem;
+      @include respond(xs){
+        margin-right: 0;
+      }
     }
+  }
+  @include respond(xs){
+    flex-flow: column nowrap;
   }
 }
 
-.centeredFeature {
-  &:after {
-    background-color: $text-color-neutral;
-    content: '';
-    height: 3px;
-    left: 120%;
-    position: absolute;
-    top: 50%;
-    width: 200%;
-    transform: translateY(-50%);
-  }
-}
+//.centeredFeature {
+//  &:after {
+//    background-color: $text-color-neutral;
+//    content: '';
+//    height: 3px;
+//    left: 120%;
+//    position: absolute;
+//    top: 50%;
+//    width: 200%;
+//    transform: translateY(-50%);
+//  }
+//}
 
 
 .cta--first {
   @include centered;
   height: 618px;
   position: relative;
-  > div:first-of-type {
+  &__background {
     background-color: $grey-background-first;
     height: 100%;
     overflow: hidden;
@@ -83,7 +105,7 @@
       transform: translate(-50%,-50%);
     }
   }
-  > div:last-of-type {
+  &__content {
     background-size: cover;
     background: url("../../assets/images/cta-background.png") no-repeat center;
     height: 100%;
@@ -135,12 +157,25 @@
   button {
     margin-top: 2rem;
   }
+  @include respond(md){
+    .cta--first__background {
+      display: none;
+    }
+    .cta--first__content {
+      width: 100%;
+    }
+    .cta--first__content .overlay {
+      padding: 5rem;
+    }
+  }
 }
 
 .logotypes {
   padding: 6rem;
   @include centered;
+  flex-wrap: wrap;
   &__client {
+    padding: .5rem 0;
     &:not(:last-of-type) {
       margin-right: 4rem;
     }
@@ -201,12 +236,24 @@
       text-transform: uppercase;
     }
   }
+  @include respond(md){
+    background: none;
+    &__description {
+      width: 100%;
+    }
+  }
 }
 
 .clients {
   padding: 10rem 8rem;
   &__wrapper {
     margin: 8.6rem 0 7.5rem;
+  }
+  @include respond(md){
+    max-width: 100%;
+  }
+  @include respond(xs){
+    padding: 2rem 1rem;
   }
 }
 
@@ -215,25 +262,48 @@
   position: relative;
   opacity: 0;
   transition: opacity 2.6s;
+  @include respond(md){
+    flex-flow: column;
+  }
   &:first-of-type {
     margin-bottom: 8.1rem;
   }
   &--left {
     right: 2%;
+    @include respond(md){
+      right: 0;
+    }
     .client__opinion {
       margin-left: 4rem;
       &:before {
         @include triangle;
-        border-width: 12px 24px 12px 0;
+        border-width: 12px 24px 12px 12px;
         border-color: transparent $grey-background-second transparent transparent;
         right: 100%;
+        @include respond(md){
+          border-width: 0 12px 24px 12px;
+          border-color: transparent transparent $grey-background-second transparent;
+          left: 50%;
+          transform: translateY(0);
+          transform: translateX(-50%);
+          top: -24px;
+        }
+      }
+      @include respond(md){
+        margin-left: 0;
       }
     }
   }
   &--right {
     left: 2%;
+    @include respond(md){
+      left: 0;
+    }
     .client__image {
       order: 2;
+      @include respond(md){
+        order: 0;
+      }
     }
     .client__opinion {
       margin-right: 4rem;
@@ -242,6 +312,17 @@
         border-width: 12px 0 12px 24px;
         border-color: transparent transparent transparent $grey-background-second;
         left: 100%;
+        @include respond(md){
+          border-width: 0 12px 24px 12px;
+          border-color: transparent transparent $grey-background-second transparent;
+          left: 50%;
+          transform: translateY(0);
+          transform: translateX(-50%);
+          top: -24px;
+        }
+      }
+      @include respond(md){
+        margin-right: 0;
       }
     }
   }
@@ -272,6 +353,10 @@
       &:before {
         content: "-";
       }
+    }
+    @include respond(md){
+      margin-top: 4rem;
+      max-width: 100%;
     }
   }
 }

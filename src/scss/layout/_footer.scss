@@ -1,4 +1,5 @@
 @import '../utils/variables';
+@import '../utils/mixins';
 
 .footer {
   &__shortcuts {
@@ -58,6 +59,11 @@
       font-family: $secondary-font;
       font-size: 1.4rem;
       margin-right: 11.9rem;
+      @include respond(xs){
+        margin-bottom: .8rem;
+        margin-right: 0;
+        text-align: center;
+      }
     }
     &__icons {
       @include centered;
@@ -76,6 +82,28 @@
       }
       img {
         width: 100%;
+      }
+    }
+    @include respond(xs){
+      display: flex;
+      flex-flow: column nowrap;
+    }
+  }
+  @include respond(md){
+    .footer__socialMedia {
+      padding: 2rem 3rem;
+    }
+    .footer__shortcuts {
+      flex-flow: column;
+      padding: 2rem 3rem;
+      &__block {
+        margin-bottom: 1rem;
+      }
+      &__point {
+        margin-bottom: 0;
+      }
+      &__heading {
+        margin-bottom: 1.2rem;
       }
     }
   }
