@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode development",
-    "live": "webpack-dev-server"
+    "dev": "webpack --env.mode development",
+    "prod": "webpack --env.mode production",
+    "live": "webpack-dev-server --env.mode development --content-base=src"
   },
   "author": "Magda Mielczarek",
   "license": "ISC",

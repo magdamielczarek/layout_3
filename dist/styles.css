@@ -189,7 +189,8 @@ html {
     .navigation--mobile {
       display: block; } }
   .navigation--mobile__checkbox {
-    display: none; }
+    display: none;
+    transition: all .5s; }
   .navigation--mobile__checkbox:checked ~ .navigation--mobile__background {
     transform: scale(50);
     transition: transform .5s ease-in-out; }
@@ -525,12 +526,17 @@ html {
       display: flex;
       flex-flow: row nowrap;
       margin: 2rem 0; }
-      .project__description__feature img {
+      .project__description__feature div {
         border: 2px solid black;
         border-radius: 50%;
+        min-height: 6.7rem;
+        height: 6.7rem;
         margin-right: 2rem;
         padding: 1.4rem;
+        min-width: 6.7rem;
         width: 6.7rem; }
+      .project__description__feature img {
+        width: 100%; }
       .project__description__feature h5 {
         color: #222;
         font-family: "Montserrat", sans-serif;

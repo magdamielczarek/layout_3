@@ -210,12 +210,18 @@
       display: flex;
       flex-flow: row nowrap;
       margin: 2rem 0;
-      img {
+      div {
         border: 2px solid black;
         border-radius: 50%;
+        min-height: 6.7rem;
+        height: 6.7rem;
         margin-right: 2rem;
         padding: 1.4rem;
+        min-width: 6.7rem;
         width: 6.7rem;
+      }
+      img {
+        width: 100%;
       }
       h5 {
         color: $text-color-dark;
